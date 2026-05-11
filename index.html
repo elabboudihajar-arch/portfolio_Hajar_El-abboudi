@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Car Rental | Official</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero" id="top">
+        <nav>
+            <ul>
+                <li><a href="#top">HOME</a></li>
+                <li><a href="#cars">GALLERY</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>LUXURY CAR RENTAL</h1>
+            <h2>Drive Your Dream Car</h2>
+            <button onclick="document.getElementById('cars').scrollIntoView({behavior: 'smooth'})">Réserver maintenant</button>
+        </div>
+    </section>
+
+    <section class="cars-section" id="cars">
+        <h2 class="section-title">Our Collection</h2>
+        <div class="cars-container" id="car-list">
+            <p style="color: #f1dfb5;">Chargement des voitures...</p>
+        </div>
+    </section>
+
+    <div id="car-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modal-name"></h2>
+                    <div class="modal-specs">
+                        <p>Engine: <span id="modal-engine"></span></p>
+                        <p>Speed: <span id="modal-speed"></span></p>
+                    </div>
+                    <button class="book-now-btn">Book This Car</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>We provide luxury vehicles tailored for clients who value comfort, performance, and prestige.</p>
+            <div class="stats">
+                <div><h3>500+</h3><span>LUXURY</span></div>
+                <div><h3>1000+</h3><span>CLIENTS</span></div>
+                <div><h3>10+</h3><span>YEARS</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-left">
+            <h3>Maroc</h3>
+            <p>+212 555555555</p>
+            <p>info-cars@gmail.com</p>
+        </div>
+
+        <form class="contact-form" id="main-form">
+            <div class="row">
+                <input type="text" placeholder="First & Last Name" required>
+                <input type="text" placeholder="Phone Number" required>
+            </div>
+            <div class="row-center">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Address">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
